@@ -18,6 +18,9 @@ vim.opt.showmode = false
 -- Enable break indent
 vim.opt.breakindent = true
 
+-- Turn off line-wrapping
+vim.opt.wrap = false
+
 -- Save undo history
 vim.opt.undofile = true
 
