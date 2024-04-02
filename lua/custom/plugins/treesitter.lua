@@ -7,6 +7,7 @@ return { -- Highlight, edit, and navigate code
       'c',
       'html',
       'lua',
+      'luadoc',
       'markdown',
       'vim',
       'vimdoc',
