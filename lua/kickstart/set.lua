@@ -57,4 +57,5 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Set the file explorer to use tree style
 vim.cmd('let g:netrw_liststyle = 3')
