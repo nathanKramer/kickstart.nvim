@@ -59,3 +59,8 @@ vim.opt.scrolloff = 10
 
 -- Set the file explorer to use tree style
 vim.cmd 'let g:netrw_liststyle = 3'
+
+-- Treesitter folds
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldlevelstart = 99
