@@ -11,6 +11,7 @@ require 'kickstart.set'
 require 'kickstart.remap'
 require 'kickstart.autocmds'
 require 'kickstart.lazy'
+require 'kickstart.command-palette'
 
 -- Set background transparency
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
@@ -25,5 +26,3 @@ vim.api.nvim_set_hl(0, 'SignColumn', { bg = 'none' })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
-
-

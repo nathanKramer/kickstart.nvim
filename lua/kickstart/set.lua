@@ -58,4 +58,4 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- Set the file explorer to use tree style
-vim.cmd('let g:netrw_liststyle = 3')
+vim.cmd 'let g:netrw_liststyle = 3'
