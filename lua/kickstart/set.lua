@@ -68,3 +68,9 @@ vim.opt.foldlevelstart = 99
 vim.diagnostic.config({
   virtual_text = true
 })
+
+-- Need to map ctrl-c to Esc so that InsertLeave fires when you ctrl+c
+vim.keymap.set('i', '<C-c>', '<Esc>')
+
+vim.api.nvim_create_autocmd("InsertEnter", { command = [[set number]] })
+vim.api.nvim_create_autocmd("InsertLeave", { command = [[set relativenumber]] })
