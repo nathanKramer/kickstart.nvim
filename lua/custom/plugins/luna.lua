@@ -1,5 +1,5 @@
 return {
-  dir = "/home/nathankramer/Projects/nathanKramer/programming-language-2/luna/editor-support/nvim",
+  dir = "/home/nathankramer/Projects/nathanKramer/luna-lang/editor-support/nvim",
   name = "luna-syntax",
   ft = "luna",
   config = function()
