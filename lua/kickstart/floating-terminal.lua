@@ -24,11 +24,19 @@ local function create_floating_window()
   return vim.api.nvim_open_win(0, true, opts)
 end
 
-function M.toggle_terminal()
-  -- If terminal is already open, close it
-  if term_win and vim.api.nvim_win_is_valid(term_win) then
+function M.close_terminal_if_open()
+  local is_open = term_win and vim.api.nvim_win_is_valid(term_win) 
+  if is_open then
     vim.api.nvim_win_close(term_win, false)
     term_win = nil
+  end
+
+  return is_open
+end
+
+function M.toggle_terminal()
+  -- If terminal is already open, close it
+  if M.close_terminal_if_open() then
     return
   end
 
@@ -51,6 +59,10 @@ function M.toggle_terminal()
   vim.keymap.set('t', '<C-j>', function()
     M.toggle_terminal()
   end, { buffer = term_buf, desc = 'Toggle terminal' })
+
+  vim.keymap.set('t', '<Esc>', function()
+    M.close_terminal_if_open()
+  end, { buffer = term_buf, desc = 'Close terminal' })
 end
 
 -- Set up the keymap
