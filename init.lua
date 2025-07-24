@@ -12,6 +12,7 @@ require 'kickstart.remap'
 require 'kickstart.autocmds'
 require 'kickstart.lazy'
 require 'kickstart.command-palette'
+require 'kickstart.floating-terminal'
 
 -- Set background transparency
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
