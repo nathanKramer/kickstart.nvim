@@ -4,7 +4,7 @@ local term_buf = nil
 local term_win = nil
 
 local function create_floating_window()
-  proportion = 0.8
+  local proportion = 0.8
   local width = math.floor(vim.o.columns * proportion)
   local height = math.floor(vim.o.lines * proportion)
 
@@ -25,7 +25,7 @@ local function create_floating_window()
 end
 
 function M.close_terminal_if_open()
-  local is_open = term_win and vim.api.nvim_win_is_valid(term_win) 
+  local is_open = term_win and vim.api.nvim_win_is_valid(term_win)
   if is_open then
     vim.api.nvim_win_close(term_win, false)
     term_win = nil
