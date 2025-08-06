@@ -14,6 +14,8 @@ return { -- Highlight, edit, and navigate code
       'javascript',
       'typescript',
       'python',
+      'json',
+      'jsonc'
     },
     -- Autoinstall languages that are not installed
     auto_install = true,
