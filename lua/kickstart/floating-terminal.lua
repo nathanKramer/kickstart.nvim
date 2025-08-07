@@ -19,6 +19,8 @@ local function create_floating_window()
     col = col,
     style = 'minimal',
     border = 'rounded',
+    title = "terminal",
+    title_pos = "center"
   }
 
   return vim.api.nvim_open_win(0, true, opts)
